@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 const uploadRoutes = require('./routes/upload');
 const apiRoutes = require('./routes/api');
 
-
+app.use(cors());
 app.use(express.json());
 
 // Routes
